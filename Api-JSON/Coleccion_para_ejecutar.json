@@ -1,0 +1,131 @@
+{
+	"info": {
+		"name": "API Gestión Escolar (Estudiantes)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. GET General (Obtener Todos)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{IP_PUBLICA}}/api/v1/estudiantes",
+					"protocol": "http",
+					"host": [
+						"{{IP_PUBLICA}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"estudiantes"
+					]
+				}
+			}
+		},
+		{
+			"name": "2. POST (Crear Registro)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre_completo\": \"Teclado Mecanico RGB\",\n  \"correo_electronico\": \"teclado@ejemplo.com\",\n  \"fecha_nacimiento\": \"2000-01-01\",\n  \"estatus\": \"Perifericos\"\n}"
+				},
+				"url": {
+					"raw": "http://{{IP_PUBLICA}}/api/v1/estudiantes",
+					"protocol": "http",
+					"host": [
+						"{{IP_PUBLICA}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"estudiantes"
+					]
+				}
+			}
+		},
+		{
+			"name": "3. GET Individual (Obtener Uno)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{IP_PUBLICA}}/api/v1/estudiantes/1",
+					"protocol": "http",
+					"host": [
+						"{{IP_PUBLICA}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"estudiantes",
+						"1"
+					]
+				}
+			}
+		},
+		{
+			"name": "4. PUT (Actualizar Registro)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"nombre_completo\": \"Teclado Mecanico RGB Pro\",\n  \"correo_electronico\": \"tecladopro@ejemplo.com\",\n  \"fecha_nacimiento\": \"2000-01-01\",\n  \"estatus\": \"Perifericos Premium\"\n}"
+				},
+				"url": {
+					"raw": "http://{{IP_PUBLICA}}/api/v1/estudiantes/1",
+					"protocol": "http",
+					"host": [
+						"{{IP_PUBLICA}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"estudiantes",
+						"1"
+					]
+				}
+			}
+		},
+		{
+			"name": "5. DELETE (Eliminar Registro)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{IP_PUBLICA}}/api/v1/estudiantes/1",
+					"protocol": "http",
+					"host": [
+						"{{IP_PUBLICA}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"estudiantes",
+						"1"
+					]
+				}
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "IP_PUBLICA",
+			"value": "Escribe_aqui_tu_ip_publica",
+			"type": "string"
+		}
+	]
+}
